@@ -1,0 +1,63 @@
+section {
+  display: none;
+}
+
+toggleVis {
+  display: block;
+}
+
+form textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 4px solid #545149;;
+  resize: none;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 4.5em;
+}
+
+form input {
+  background-color: #4056A1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border: none;
+}
+
+textarea::placeholder {
+  font-weight: 900;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', sans-serif;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+.error {
+  display: none;
+  color: white;
+  border: 5px solid white;;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  background-color: red;
+}
+
+#error > p {
+  display: inline;
+}
+
+.toggleFlex {
+  display: flex; 
+  text-align: center;
+}
+
+textarea:focus {
+  outline: none;
+}
