@@ -1,0 +1,47 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 120px;
+  width: 100vw;
+  z-index: 100;
+
+  background-color: #4056A1;
+
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+
+  padding: 1.5em 1.5em 0 1.5em;
+}
+
+.nav-right {
+  font-family: 'Source Sans Pro', sans-serif;
+  float: right;
+  text-align: center;
+  transition-duration: 1s;
+}
+
+nav i {
+  color: red;
+  animation: float 2s ease-in-out infinite;
+  transition: all .4s ease-in-out;
+}
+
+.toggle1:hover > i {
+  font-size: 1.5em;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-7.5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
