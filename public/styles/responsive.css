@@ -10,5 +10,14 @@
     margin-top: -400px;
     margin-left: 40%;
   }
+
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+  .container {
+    margin-top: -520px;
+  }
   
 }

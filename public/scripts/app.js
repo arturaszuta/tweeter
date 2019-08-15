@@ -45,12 +45,18 @@ $(document).ready(function() {
 
   //SHOW/HIDE FAST SCROLLER & CREATE NEW TWEET ELEMENT
   $(document).on('scroll', () => {
-    if ($(this).scrollTop() >= 300) {
+    if ($(this).scrollTop() >= 350) {
       $('#scroller').css('opacity', '.8');
       $('.nav-right').css('opacity', '0');
-    } else if($(this).scrollTop() < 250) {
+      if ($( window ).width() <= 1024) {
+        $('nav').css('background-color', '#4056A1');
+      }
+    } else if($(this).scrollTop() < 325) {
       $('#scroller').css('opacity', '0');
       $('.nav-right').css('opacity', '1');
+      if ($( window ).width() <= 1024) {
+        $('nav').css('background-color', 'transparent');
+      }
     };
   });
 
