@@ -13,11 +13,11 @@ $(document).ready(function() {
     });
 
   // SUBMIT FORM EVENT - WHICH POSTS NEW TWEETS
-  $( "form" ).submit(function(event) {
+  $("form").submit(function(event) {
     event.preventDefault();
     let $form = $(this),
       term = $('#tweetText').val(),
-      url = $form.attr( "action");
+      url = $form.attr("action");
     if (validate(term)) {
       $.post(url, $form.serialize()).done(() => {
         $.ajax('/tweets', { method: 'GET' })
@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('textarea').val('');
         $('.counter').text(140);
         event.preventDefault();
-      })
+      });
     } else {
       event.preventDefault();
     }
@@ -48,16 +48,16 @@ $(document).ready(function() {
     if ($(this).scrollTop() >= 350) {
       $('#scroller').css('opacity', '.8');
       $('.nav-right').css('opacity', '0');
-      if ($( window ).width() <= 1024) {
+      if ($(window).width() < 1024) {
         $('nav').css('background-color', '#4056A1');
       }
-    } else if($(this).scrollTop() < 325) {
+    } else if ($(this).scrollTop() < 325) {
       $('#scroller').css('opacity', '0');
       $('.nav-right').css('opacity', '1');
-      if ($( window ).width() <= 1024) {
+      if ($(window).width() < 1024) {
         $('nav').css('background-color', 'transparent');
       }
-    };
+    }
   });
 
   //FAST SCROLLER ELEMENT
@@ -72,7 +72,7 @@ $(document).ready(function() {
   // ERROR HIDE ON REFOCUS
   $('textarea').on('focus', () => {
     $('.error').slideUp('fast');
-  })
+  });
 
 
 });
