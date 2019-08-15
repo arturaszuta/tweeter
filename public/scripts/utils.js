@@ -1,3 +1,12 @@
+//UTILITY FUNCTIONS
+
+//"SANITIZER" - MAKES SURE SCRIPTS CANNOT BE SUBMITTED AS A FORM
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 //DATE CALCULATOR - CALCULATES HOW OLD IS THE TWEET
 const convertDate = function(timestamp) {
   const now = Date.now();
@@ -44,3 +53,19 @@ const renderTweets = function(tweetArray) {
     $('.whereTweetsLive').prepend(newTweet);
   });
 };
+
+//VALIDATOR - MAKES SURE TWEET HAS CONTEXT AND IS NOT MORE THAN 140 CHARACTERS + DISPLAYS ERROR MESSAGES
+const validate = function(input) {
+  if (input.length > 140) {
+    $('.error span').text('Your tweet is too long!!!!!');
+    $('.error').slideDown('slow');
+    $('.error').addClass('toggleFlex');
+  } else if (!input) {
+    $('.error span').text('Tweet must have content!!!!!');
+    $('.error').slideDown('slow');
+    $('.error').addClass('toggleFlex');
+  } else {
+    $('.error').slideUp('slow');
+    return true;
+  }
+}
