@@ -1,0 +1,61 @@
+article {
+  border: 4px solid #545149;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+article > p {
+  border-bottom: 4px solid #545149;
+  margin-bottom: 8px;
+  padding-bottom: 30px;
+  word-wrap: break-word;
+}
+
+article > footer {
+  font-size: .65em;
+  padding-left: 1em;
+}
+
+article > footer > :nth-child(2) {
+  float: right;
+  color: #4056A1;
+}
+
+article i {
+  margin-right: 8px;
+}
+
+article > header {
+  margin-bottom: 2em;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hoverText {
+  color: rgba(64,86,161,0.3);
+}
+
+article > header > span {
+  line-height: 75px;
+  display: none;
+}
+
+article header div {
+  display: flex;
+  align-items: center;
+}
+
+article  img {
+  height: 75px;
+  width: auto;
+}
+
+article:hover {
+  box-shadow: 10px 10px 0px 0px rgba(64,86,161,0.3);
+}
+
+article:hover > header > span {
+  display: inline;
+  font-weight: 400;
+}
