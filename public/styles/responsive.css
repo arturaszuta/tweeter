@@ -1,0 +1,14 @@
+@media only screen and (min-width: 1024px) {
+  body > header {
+    width: 30%;
+    margin-top: 170px;
+    margin-left: 5%;
+  }
+
+  body > main {
+    width: 50%;
+    margin-top: -400px;
+    margin-left: 40%;
+  }
+  
+}
