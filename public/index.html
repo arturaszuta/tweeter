@@ -50,17 +50,24 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
        <!-- ERROR & NEW TWEET HTML -->
-        <section class="new-tweet">
-            <form method="POST" action="/tweets" enctype="application/x-www-form-urlencoded">
-              <textarea id="tweetText" name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
+       <div class='error'>
+          <p><i class="fas fa-exclamation-triangle"></i><span>SAMPLE ERROR TEXT</span><i class="fas fa-exclamation-triangle"></i></p>
+      </div>
+      <section class="new-tweet">
+        <form method="POST" action="/tweets" enctype="application/x-www-form-urlencoded">
+          <textarea id="tweetText" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
 
           <!-- MAIN TWEET CONTAINER - GETS RENDER UPON LOADING JS -->
       <div class="whereTweetsLive">
 
+      </div>
+      <!-- QUICK SCROLLER ELEMENT -->
+      <div id='scroller'>
+          <i class="fas fa-angle-double-up"></i>
       </div>
     </main>
 

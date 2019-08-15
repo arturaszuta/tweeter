@@ -34,12 +34,39 @@ $(document).ready(function() {
     }
   });
 
+  //DOM MANIPULATION BELOW
+
   //TOGGLE NEW TWEET FIELD
   $('.toggle1').on('click', function() {
     $('.new-tweet').addClass('toggleVis');
     $('.new-tweet').slideToggle();
     $('#tweetText').focus();
   });
+
+  //SHOW/HIDE FAST SCROLLER & CREATE NEW TWEET ELEMENT
+  $(document).on('scroll', () => {
+    if ($(this).scrollTop() >= 300) {
+      $('#scroller').css('opacity', '.8');
+      $('.nav-right').css('opacity', '0');
+    } else if($(this).scrollTop() < 250) {
+      $('#scroller').css('opacity', '0');
+      $('.nav-right').css('opacity', '1');
+    };
+  });
+
+  //FAST SCROLLER ELEMENT
+  $("#scroller").on('click',function() {
+    $('html, body').animate({
+      'scrollTop' : $("#mainNav").position().top,
+    });
+    $('.new-tweet').slideDown();
+    $('#tweetText').focus();
+  });
+
+  // ERROR HIDE ON REFOCUS
+  $('textarea').on('focus', () => {
+    $('.error').slideUp('fast');
+  })
 
 
 });

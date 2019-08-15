@@ -31,3 +31,35 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ #scroller {
+  font-size: 2.5em;
+  margin-right: .6em;
+  margin-bottom: .25em;
+  background-color: #FF0000;
+  border-radius: 500px;
+  padding: .25em .55em;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  color: #FFFFFF;
+  transition-duration: 1s;
+}
+
+@keyframes float {
+ 0% {
+   transform: translatey(0px);
+ }
+ 50% {
+   transform: translatey(-7.5px);
+ }
+ 100% {
+   transform: translatey(0px);
+ }
+}
+
+#scroller:hover {
+ animation: float 2s ease-in-out infinite;
+}
